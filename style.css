@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Cabin:ital,wght@0,400..700;1,400..700&family=Domine:wght@500&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montaga&family=Mukta:wght@200;500;800&family=Outfit:wght@100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Signika+Negative:wght@300..700&display=swap');
+
+body{
+    margin: 0;
+    background-color: aqua;
+}
+
+h1{
+    text-align: center;
+    font-family: "Arvo", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.head, .left_arm, .torso, .right_arm, .left_leg, .right_leg
+{
+    background-color: indigo;
+}
+
+.head{
+    height: 150px;
+    width: 200px;
+    border-radius: 150px 150px 0 0;
+    margin: 0 auto;
+}
+
+.eyes
+{
+    position: relative;
+    top: 70px;
+}
+
+.left_eye, .right_eye{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+}
+
+.left_eye{
+    margin-left: 30px;
+}
+.right_eye{
+    margin-left: 90px;
+}
+
+.upper_body
+{
+    width: 300px;
+    height: 150px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.torso{
+    width: 200px;
+    height: 200px;
+    border-radius: 50px 50px 50px 50px;
+}
+
+.left_arm, .right_arm
+{
+    width: 40px;
+    height: 125px;
+    border-radius: 100px;
+    margin-top: 20px;
+}
+
+.left_arm
+{
+    margin-right: 10px;
+}
+
+.right_arm{
+    margin-left: 10px;
+}
+
+.lower_body{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.left_leg, .right_leg {
+    width: 40px;
+    height: 120px;
+    border-radius: 0 0 100px 100px;
+    display: inline-block;
+}
+
+.left_leg{
+    margin-left: 45px;
+}
+
+.right_leg{
+    margin-left: 30px;
+}
+.robot:hover .head{
+    animation: movehead 2s infinite;
+}
+@keyframes movehead{
+    0%{
+        width: 200px;
+    }
+    25%{
+        width: 300px;
+    }
+    50%{
+        width: 200px;
+    }
+    75%{
+        width: 300px;
+    }
+    100%{
+        width: 200px;
+    }
+}
+.robot:hover .left_arm{
+    animation: moveleftarm 2s infinite;
+}
+
+@keyframes moveleftarm {
+    0%{
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }
+    25%{
+        transform: rotate(90deg);
+        transform-origin: top center;
+    }
+    50%{
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }
+    75%{
+        transform: rotate(90deg);
+        transform-origin: top center;
+    }
+    100%{
+        transform: rotate(90deg);
+        transform-origin: top center;
+    }
+}
+.robot:hover .right_arm{
+    animation: moverightarm 2s infinite;
+}
+
+@keyframes moverightarm {
+    0%{
+        transform: rotate(-0deg);
+        transform-origin: top center;
+    }
+    25%{
+        transform: rotate(-90deg);
+        transform-origin: top center;
+    }
+    50%{
+        transform: rotate(-0deg);
+        transform-origin: top center;
+    }
+    75%{
+        transform: rotate(-90deg);
+        transform-origin: top center;
+    }
+    100%{
+        transform: rotate(-90deg);
+        transform-origin: top center;
+    }
+}
+.robot:hover .torso{
+    animation: torso 2s infinite;
+}
+@keyframes torso{
+    0%{
+        transform: rotate(90deg);
+    }
+    25%{
+        transform: rotate(360deg);
+    }
+    50%{
+        transform: rotate(90deg);
+    }
+    75%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
+
+.robot:hover .right_leg{
+    animation: moverightleg 2s infinite;
+}
+
+@keyframes moverightleg {
+    0%{
+        transform: rotate(-0deg);
+        transform-origin: top center;
+    }
+    25%{
+        transform: rotate(-40deg);
+        transform-origin: top center;
+    }
+    50%{
+        transform: rotate(-0deg);
+        transform-origin: top center;
+    }
+    75%{
+        transform: rotate(-40deg);
+        transform-origin: top center;
+    }
+    100%{
+        transform: rotate(-40deg);
+        transform-origin: top center;
+    }
+}
+
+.robot:hover .left_leg{
+    animation: moveleftleg 2s infinite;
+}
+
+@keyframes moveleftleg {
+    0%{
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }
+    25%{
+        transform: rotate(40deg);
+        transform-origin: top center;
+    }
+    50%{
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }
+    75%{
+        transform: rotate(40deg);
+        transform-origin: top center;
+    }
+    100%{
+        transform: rotate(40deg);
+        transform-origin: top center;
+    }
+}
